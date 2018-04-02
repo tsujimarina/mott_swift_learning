@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController03: UIViewController {
 
+    @IBOutlet weak var uiImageView3: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let uiImage3 = UIImage(named:"kronosくん3")
+        uiImageView3.image = uiImage3
     }
 
     override func didReceiveMemoryWarning() {

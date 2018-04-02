@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7f-tH-6jQ">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kronosくん1" translatesAutoresizingMaskIntoConstraints="NO" id="XeD-eo-Ez9">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeD-eo-Ez9">
                                         <rect key="frame" x="0.0" y="0.0" width="735" height="413"/>
                                     </imageView>
                                 </subviews>
@@ -46,6 +46,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="uiImageView1" destination="XeD-eo-Ez9" id="T4w-Gz-Ce4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +73,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkF-9v-8OS">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kronosくん2" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-Yl-FXQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-Yl-FXQ">
                                         <rect key="frame" x="0.0" y="0.0" width="735" height="413"/>
                                     </imageView>
                                 </subviews>
@@ -93,6 +96,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FGR-3a-FJI"/>
                     </view>
+                    <connections>
+                        <outlet property="uiImageView2" destination="pcz-Yl-FXQ" id="Ael-fa-PH7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0k6-pS-BOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +115,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2X-nv-UX3">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kronosくん4" translatesAutoresizingMaskIntoConstraints="NO" id="0gB-xz-RCX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gB-xz-RCX">
                                         <rect key="frame" x="0.0" y="0.0" width="735" height="413"/>
                                     </imageView>
                                 </subviews>
@@ -132,6 +138,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pWG-03-bIO"/>
                     </view>
+                    <connections>
+                        <outlet property="uiImageView4" destination="0gB-xz-RCX" id="2OK-x7-DIq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obX-4G-pjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +157,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQe-6s-YJr">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kronosくん3" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-LZ-TqC">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-LZ-TqC">
                                         <rect key="frame" x="0.0" y="0.0" width="735" height="413"/>
                                     </imageView>
                                 </subviews>
@@ -171,16 +180,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sTx-De-Btq"/>
                     </view>
+                    <connections>
+                        <outlet property="uiImageView3" destination="yWT-LZ-TqC" id="mrA-hw-SB2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I5-3S-YY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137" y="815"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="kronosくん1" width="1024" height="1024"/>
-        <image name="kronosくん2" width="1024" height="1024"/>
-        <image name="kronosくん3" width="1024" height="1024"/>
-        <image name="kronosくん4" width="1024" height="1024"/>
-    </resources>
 </document>
