@@ -8,35 +8,28 @@
 
 import UIKit
 
-struct PageSettings {
-    static let pageControllerIdentifierList : [String] = [
-        "vc01",
-        "vc02",
-        "vc03",
-        "vc04"
-    ]
-    
-    static func generateViewControllerList() -> [UIViewController] {
-        var viewControllers : [UIViewController] = []
-        self.pageControllerIdentifierList.forEach{ viewControllerName in
-            let viewController = UIStoryboard(name: "Main", bundle: nil) . instantiateViewController(withIdentifier: "\(viewControllerName)")
-            
-            viewControllers.append(viewController)
-        }
-        return viewControllers
-    }
-}
-
 class PageViewController: UIPageViewController {
-    
-    var viewControllerIndex : Int = 0
-    
+  var viewControllerIndex : Int = 0
+  let imageNames: [String] = ["kronosくん1", "kronosくん2", "kronosくん3", "kronosくん4"]
+  var targetViewControllers : [UIViewController] = []
+
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+      super.viewDidLoad()
+
+      // 表示用ViewControllerを生成し、画像を設定する
+      for i in 0..<imageNames.count {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "vc02") as! ViewController02
+
+        // 画像名をセットしておく
+        viewController.setImageName(imageNames[i])
+        targetViewControllers.append(viewController)
+      }
+
         // Do any additional setup after loading the view.
-        self.setViewControllers([PageSettings.generateViewControllerList().first!], direction: .forward, animated: true, completion: nil)
+        self.setViewControllers([targetViewControllers[0]], direction: .forward, animated: true, completion: nil)
+      // StoryBoard上で設定も可能
         self.dataSource = self
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,33 +38,31 @@ class PageViewController: UIPageViewController {
     }
 }
 
+// MARK: - UIPageViewControllerDataSource
 extension PageViewController : UIPageViewControllerDataSource {
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
-        let targetViewControllers : [UIViewController] = PageSettings.generateViewControllerList()
-        
+
         if viewControllerIndex == targetViewControllers.count - 1 {
             return nil
         } else {
             viewControllerIndex = viewControllerIndex + 1
         }
-        
+
         return targetViewControllers[viewControllerIndex]
     }
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
-        let targetViewControllers : [UIViewController] = PageSettings.generateViewControllerList()
-        
+
         if viewControllerIndex == 0 {
             return nil
         } else {
             viewControllerIndex = viewControllerIndex - 1
         }
-        
+
         return targetViewControllers[viewControllerIndex]
     }
-    
+
 }
+
 
